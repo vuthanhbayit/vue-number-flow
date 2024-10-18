@@ -1,0 +1,52 @@
+{
+  "name": "@vt7/vue-number-flow",
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [
+    "number-flow",
+    "vue",
+    "vue 3",
+    "animation-number"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite playground",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
+    "format": "prettier . --write",
+    "release": "changelogen --release && npm publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "number-flow": "^0.3.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.16.11",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/eslint-config-prettier": "^10.0.0",
+    "@vue/eslint-config-typescript": "^14.0.1",
+    "@vue/tsconfig": "^0.5.1",
+    "changelogen": "^0.5.7",
+    "eslint": "^9.12.0",
+    "eslint-plugin-vue": "^9.29.0",
+    "npm-run-all2": "^6.2.3",
+    "prettier": "^3.3.3",
+    "typescript": "~5.5.4",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-vue-devtools": "^7.4.6",
+    "vue": "^3.5.12",
+    "vue-tsc": "^2.1.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
