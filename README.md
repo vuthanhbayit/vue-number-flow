@@ -28,8 +28,19 @@ npm install @vt7/vue-number-flow
 
 ## Example
 
-```vue
+```ts
+// main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+import { defineNumberFlow } from '@vt7/vue-number-flow'
 
+defineNumberFlow()
+
+createApp(App).mount('#app')
+
+```
+
+```vue
 <template>
   <vue-number-flow
     :value="1234.56"
