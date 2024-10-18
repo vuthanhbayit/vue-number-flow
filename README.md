@@ -1,39 +1,44 @@
 # vue-number-flow
 
-This template should help get you started developing with Vue 3 in Vite.
+This Vue 3 component is a wrapper around the [number-flow](https://github.com/barvian/number-flow) web component
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Installation
 
 ```sh
-pnpm install
+npm install @vt7/vue-number-flow
 ```
 
-### Compile and Hot-Reload for Development
+## Props
 
-```sh
-pnpm dev
-```
+| Prop                     | Type                        | Default    |
+|--------------------------|-----------------------------|------------|
+| `value`                  | `number`                    | Required   |
+| `format`                 | `Intl.NumberFormatOptions`  | `undefined`|
+| `locales`                | `Intl.LocalesArgument`      | `undefined`|
+| `isolate`                | `boolean`                   | `false`    |
+| `animated`               | `boolean`                   | `true`     |
+| `respectMotionPreference`| `boolean`                   | `true`     |
+| `willChange`             | `boolean`                   | `false`    |
+| `trend`                  | `boolean`                   | `true`     |
+| `onAnimationsStart`      | `function`                  | `undefined`|
+| `onAnimationsFinish`     | `function`                  | `undefined`|
+| `opacityTiming`          | `EffectTiming`              | `undefined`|
+| `transformTiming`        | `EffectTiming`              | `undefined`|
+| `spinTiming`             | `EffectTiming`              | `undefined`|
 
-### Type-Check, Compile and Minify for Production
+## Example
 
-```sh
-pnpm build
-```
+```vue
 
-### Lint with [ESLint](https://eslint.org/)
+<template>
+  <vue-number-flow
+    :value="1234.56"
+    :locales="'vi-VN'"
+    :format="{ style: 'currency', currency: 'VND' }"
+  ></vue-number-flow>
+</template>
 
-```sh
-pnpm lint
+<script lang="ts">
+  import { VueNumberFlow } from '@vt7/vue-number-flow'
+</script>
 ```
