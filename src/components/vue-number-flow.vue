@@ -11,33 +11,15 @@ import { computed, getCurrentInstance, nextTick, ref, watch } from 'vue'
 import {
   partitionParts,
   slottedStyles,
-  NumberFlowLite,
   type Format,
   type Trend,
 } from 'number-flow'
-
-const OBSERVED_ATTRIBUTES = ['parts']
-
-class NumberFlowElement extends NumberFlowLite {
-  static get observedAttributes() {
-    return OBSERVED_ATTRIBUTES
-  }
-
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  attributeChangedCallback(attr, _oldValue, newValue) {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    this[attr] = JSON.parse(newValue)
-  }
-}
-
-NumberFlowElement.define()
 
 interface Props {
   value: number
   format?: Format
   locales?: Intl.LocalesArgument
+  isolate?: boolean
   animated?: boolean
   respectMotionPreference?: boolean
   willChange?: boolean
@@ -50,6 +32,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  isolate: false,
   animated: true,
   respectMotionPreference: true,
   willChange: false,
@@ -90,13 +73,15 @@ watch(
 
     if (!rootEl.value) return
 
-    rootEl.value.animated = props.animated
-    rootEl.value.respectMotionPreference = props.respectMotionPreference
-    rootEl.value.trend = props.trend
-    if (props.opacityTiming) rootEl.value.opacityTiming = props.opacityTiming
-    if (props.transformTiming)
-      rootEl.value.transformTiming = props.transformTiming
-    if (props.spinTiming) rootEl.value.spinTiming = props.spinTiming
+    rootEl.value.animated = newProps.animated
+    rootEl.value.respectMotionPreference = newProps.respectMotionPreference
+    rootEl.value.trend = newProps.trend
+    rootEl.value.isolate = newProps.isolate
+    if (newProps.opacityTiming)
+      rootEl.value.opacityTiming = newProps.opacityTiming
+    if (newProps.transformTiming)
+      rootEl.value.transformTiming = newProps.transformTiming
+    if (newProps.spinTiming) rootEl.value.spinTiming = newProps.spinTiming
 
     if (prevProps?.onAnimationsStart) {
       rootEl.value.removeEventListener(

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { VueNumberFlow } from '../../dist'
+//
+// import { VueNumberFlow } from '../../src'
 import type { Format } from 'number-flow'
 import { useCycle } from './composables'
 
