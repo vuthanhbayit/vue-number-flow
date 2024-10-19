@@ -28,7 +28,8 @@ npm install @vt7/vue-number-flow
 
 ## Example
 
-```ts
+#### Vue3
+```ts 
 // main.ts
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -40,6 +41,18 @@ createApp(App).mount('#app')
 
 ```
 
+#### Nuxt3
+```ts 
+// plugins/number-flow.client.ts
+import { defineNuxtPlugin } from '#imports'
+import { defineNumberFlow } from '@vt7/vue-number-flow'
+
+defineNumberFlow()
+
+export default defineNuxtPlugin(() => {})
+```
+
+#### Use
 ```vue
 <template>
   <vue-number-flow
