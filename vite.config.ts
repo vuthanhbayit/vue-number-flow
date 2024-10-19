@@ -34,7 +34,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'number-flow', 'esm-env'],
       output: {
         globals: {
           vue: 'Vue',
