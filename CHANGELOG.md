@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/vuthanhbayit/vue-number-flow/compare/v0.0.2...v0.0.3)
+
+### 🚀 Enhancements
+
+- External number-flow ([d4fd81e](https://github.com/vuthanhbayit/vue-number-flow/commit/d4fd81e))
+
+### ❤️ Contributors
+
+- Vu Thanh Bay <vuthanhbayit@gmail.com>
+
 ## v0.0.2
 
 [compare changes](https://github.com/vuthanhbayit/vue-number-flow/compare/v0.0.1...v0.0.2)
