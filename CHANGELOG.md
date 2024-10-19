@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/vuthanhbayit/vue-number-flow/compare/v0.0.3...v0.0.4)
+
+### 🚀 Enhancements
+
+- Update readme for nuxt 3 ([81596d4](https://github.com/vuthanhbayit/vue-number-flow/commit/81596d4))
+
+### 🩹 Fixes
+
+- Build umd ([fe25520](https://github.com/vuthanhbayit/vue-number-flow/commit/fe25520))
+
+### ❤️ Contributors
+
+- Vu Thanh Bay <vuthanhbayit@gmail.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/vuthanhbayit/vue-number-flow/compare/v0.0.2...v0.0.3)
