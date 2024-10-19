@@ -31,7 +31,6 @@ export default defineConfig({
       entry: fileURLToPath(new URL('./src/index.ts', import.meta.url)),
       name: 'index',
       fileName: 'index',
-      formats: ['es'],
     },
     rollupOptions: {
       external: ['vue', 'number-flow', 'esm-env'],
