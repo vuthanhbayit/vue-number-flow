@@ -52,6 +52,15 @@ defineNumberFlow()
 export default defineNuxtPlugin(() => {})
 ```
 
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  build: {
+    transpile: ['number-flow']
+  }
+})
+```
+
 #### Use
 ```vue
 <template>
