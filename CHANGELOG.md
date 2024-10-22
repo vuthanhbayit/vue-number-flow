@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/vuthanhbayit/vue-number-flow/compare/v0.0.4...v0.0.5)
+
+### 🚀 Enhancements
+
+- Update readme ([512ec22](https://github.com/vuthanhbayit/vue-number-flow/commit/512ec22))
+
+### 🩹 Fixes
+
+- Vue Invalid watch source ([084a5c9](https://github.com/vuthanhbayit/vue-number-flow/commit/084a5c9))
+
+### ❤️ Contributors
+
+- Vu Thanh Bay <vuthanhbayit@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/vuthanhbayit/vue-number-flow/compare/v0.0.3...v0.0.4)
