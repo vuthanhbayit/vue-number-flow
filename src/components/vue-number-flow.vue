@@ -8,12 +8,15 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, nextTick, ref, watch } from 'vue'
+
 import {
   partitionParts,
   slottedStyles,
   type Format,
   type Trend,
 } from 'number-flow'
+
+import { omit } from '@/utils'
 
 interface Props {
   value: number
@@ -67,7 +70,7 @@ watch(
 )
 
 watch(
-  props,
+  () => omit(props, 'value'),
   async (newProps, prevProps) => {
     await nextTick()
 
